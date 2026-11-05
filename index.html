@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eBay規約と自動化ツール</title>
+<style>
+body{margin:0;background:#f6f7f9;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;line-height:1.85;font-size:16px}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h2{font-size:1.15rem;margin:0 0 .6em;padding-left:.6em;border-left:4px solid #5b8def}
+.card{background:#fff;border:1px solid #e3e6eb;border-radius:12px;padding:18px 20px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card p{margin:.6em 0}
+blockquote{margin:1em 0;padding:12px 16px;background:#f1f4f9;border-left:4px solid #9aa7bd;border-radius:6px;font-size:.92rem;word-break:break-word;color:#333}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin:1em 0}
+th,td{border:1px solid #dde1e7;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#eef2f8}
+.sample{border:2px solid #5b8def;background:#f3f7ff;border-radius:10px;padding:14px 18px;margin:1em 0}
+.sample .label{font-weight:bold;color:#2f5fc4;margin-bottom:.4em}
+.note{color:#777;font-size:.82rem;margin-top:28px}
+a{color:#2f5fc4;word-break:break-all}
+@media print{body{background:#fff}.card{box-shadow:none;break-inside:avoid}}
+h1{font-size:1.5em;margin:24px 0 8px}
+</style>
+</head>
+<body>
+<main>
+<h1>eBay利用規約と自動化ツールについて</h1>
+
+<div class="card">
+<h2>1. 調べた事実</h2>
+<ul>
+<li>該当箇所：eBay利用規約（User Agreement）第3章「Using eBay」</li>
+<li>2026年1月20日に改定が発表され、2026年2月20日から有効。現在の版は2026年6月28日から有効。</li>
+</ul>
+<p>原文（英語）</p>
+<blockquote lang="en">use any robot, spider, scraper, data mining tools, data gathering and extraction tools, or other automated means (including, without limitation buy-for-me agents, <strong>LLM-driven bots</strong>, or any end-to-end flow that attempts to place orders without human review) to access our Services for any purpose, except with the prior express permission of eBay</blockquote>
+<p>日本語の要点</p>
+<ul>
+<li>ロボット、スクレイパー、データ収集・抽出ツール、AIで動くボット（LLM-driven bots）などの自動の手段で、eBayにアクセスしてはいけない</li>
+<li>目的は問わない（「for any purpose」）</li>
+<li>例外は、eBayが事前に明示的に許可した場合だけ</li>
+</ul>
+<p>確認先：<a href="https://www.ebay.com/help/policies/member-behavior-policies/user-agreement?id=4259">https://www.ebay.com/help/policies/member-behavior-policies/user-agreement?id=4259</a></p>
+</div>
+
+<div class="card">
+<h2>2. 行った対応</h2>
+<p>規約は、人が開いた画面を拡張機能が読み取る場合と、自動で開いて読み取る場合を区別していません。そのため、配布している拡張機能「ぶんせき君」「しらべる君」の画面読み取り機能は、この規約に触れる可能性があると判断し、取り除きました。</p>
+<table>
+<thead><tr><th>拡張機能</th><th>取り除いた機能</th><th>残した機能</th></tr></thead>
+<tbody>
+<tr><td>ぶんせき君（v4.6.1）</td><td>eBayの検索結果・テラピークの画面からデータを読み取る機能</td><td>自分のデータ（CSV）の分析、市場データのCSV・ZIP読み込み、AIへの相談</td></tr>
+<tr><td>しらべる君（v1.4.3）</td><td>eBay・テラピークの画面からデータを読み取る機能</td><td>メルカリでの調べもの、eBay・テラピークの検索ページを開くボタン（開くだけで、データは読み取りません）</td></tr>
+</tbody>
+</table>
+<p>どちらも、拡張機能の画面に「規約のため停止した」というお知らせを表示するようにしています。2026年11月5日にChromeウェブストアへ申請済みで、審査待ちです。</p>
+</div>
+
+<p class="note">作成日：2026年11月5日</p>
+</main>
+</body>
+</html>
